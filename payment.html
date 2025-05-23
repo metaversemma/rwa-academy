@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密货币支付 | RWA Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="py-4 px-6 bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html"><span class="text-2xl font-bold text-blue-400">RWA Academy</span></a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#courses" class="hover:text-blue-400 transition">课程</a>
+                <a href="index.html#benefits" class="hover:text-blue-400 transition">优势</a>
+                <a href="index.html#testimonials" class="hover:text-blue-400 transition">学员反馈</a>
+                <a href="index.html#pricing" class="hover:text-blue-400 transition">价格</a>
+            </nav>
+            <div>
+                <a href="login.html" class="text-blue-400 hover:text-blue-300 transition">登录</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen flex items-center justify-center pt-20 pb-10 px-4">
+        <div class="max-w-xl w-full bg-gray-800 rounded-xl p-8 shadow-2xl">
+            <div class="text-center mb-10">
+                <h1 class="text-3xl font-bold mb-4">加密货币支付</h1>
+                <p class="text-gray-400">您正在购买 <span class="text-blue-400 font-bold">RWA基础入门</span> 课程</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="mb-6">
+                        <label class="block text-gray-400 text-sm mb-2">选择加密货币</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button class="crypto-select-btn active flex flex-col items-center justify-center p-4 rounded-lg border border-blue-500 bg-gray-900 hover:bg-gray-800 transition" data-currency="ETH">
+                                <svg class="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.944 17.97L4.58 13.62 11.943 24l7.37-10.38-7.372 4.35h.003zM12.056 0L4.69 12.223l7.365 4.354 7.365-4.35L12.056 0z"></path>
+                                </svg>
+                                <span>ETH</span>
+                            </button>
+                            
+                            <button class="crypto-select-btn flex flex-col items-center justify-center p-4 rounded-lg border border-gray-700 bg-gray-900 hover:bg-gray-800 transition" data-currency="BTC">
+                                <svg class="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.4s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z"></path>
+                                </svg>
+                                <span>BTC</span>
+                            </button>
+                            
+                            <button class="crypto-select-btn flex flex-col items-center justify-center p-4 rounded-lg border border-gray-700 bg-gray-900 hover:bg-gray-800 transition" data-currency="USDT">
+                                <svg class="w-8 h-8 mb-2" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.374 0 0 5.374 0 12c0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.626-5.373-12-12-12zm-.847 18.262c-3.293 0-5.963-2.67-5.963-5.963 0-3.293 2.67-5.963 5.963-5.963 3.293 0 5.963 2.67 5.963 5.963 0 3.293-2.67 5.963-5.963 5.963zm8.254-6.17H14.41c-.268-1.594-1.659-2.814-3.36-2.814-1.876 0-3.399 1.498-3.399 3.349 0 1.858 1.523 3.363 3.399 3.363a3.38 3.38 0 003.093-2.025h3.913c.028 6.542-7.903 8.11-7.903 8.11v-4.454s-.959.332-1.253.332c-.294 0-1.103-.163-1.103-.163V9.401s.616.037 1.103.037c.487 0 1.253-.204 1.253-.204V4.767s8.178 1.859 7.802 7.325z"></path>
+                                </svg>
+                                <span>USDT</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-400 text-sm mb-2">付款金额</label>
+                        <div class="flex items-center justify-between bg-gray-900 border border-gray-700 rounded-lg p-4">
+                            <div>
+                                <span class="text-2xl font-bold crypto-amount">0.06</span>
+                                <span class="text-2xl font-bold crypto-symbol">ETH</span>
+                            </div>
+                            <div class="text-gray-400">≈ $99.00</div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-400 text-sm mb-2">交易状态</label>
+                        <div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 rounded-lg p-4 text-center">
+                            <div class="text-yellow-400 font-bold mb-1">等待支付</div>
+                            <div class="text-sm text-gray-400">交易将在确认后自动处理</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="mb-6">
+                        <label class="block text-gray-400 text-sm mb-2">转账至此钱包地址</label>
+                        <div class="flex flex-col space-y-2">
+                            <div class="bg-gray-900 border border-gray-700 rounded-lg p-4 break-all font-mono text-sm">
+                                <span id="wallet-address">0x6fC21092DA55B392b045eD78F4732d71184677E4</span>
+                            </div>
+                            <button id="copy-address" class="flex items-center justify-center py-2 text-blue-400 hover:text-blue-300 transition">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                                </svg>
+                                复制地址
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-400 text-sm mb-2">或扫描二维码</label>
+                        <div class="bg-white p-4 rounded-lg flex justify-center">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x6fC21092DA55B392b045eD78F4732d71184677E4" alt="Payment QR Code" class="w-44 h-44">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-sm text-gray-400 mb-2">支付完成后自动处理</div>
+                        <div id="payment-timer" class="text-blue-400 font-bold">30:00</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-gray-700">
+                <h3 class="font-bold mb-4">支付说明</h3>
+                <ul class="text-sm text-gray-400 space-y-2">
+                    <li>• 请确保从您的钱包中发送<span class="text-white font-bold crypto-amount">0.06</span> <span class="text-white font-bold crypto-symbol">ETH</span>到上面显示的地址</li>
+                    <li>• 付款完成后，系统将自动处理您的订单</li>
+                    <li>• 请勿发送其他币种到此地址，否则可能导致资金丢失</li>
+                    <li>• 如遇任何问题，请与客服联系：support@rwa-academy.com</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black py-10 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html"><span class="text-2xl font-bold text-blue-400">RWA Academy</span></a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-400 text-sm">© 2024 RWA Academy. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">隐私政策</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">服务条款</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 加密货币选择功能
+        const cryptoButtons = document.querySelectorAll('.crypto-select-btn');
+        const cryptoAmount = document.querySelectorAll('.crypto-amount');
+        const cryptoSymbol = document.querySelectorAll('.crypto-symbol');
+        const walletAddress = document.getElementById('wallet-address');
+        const qrCode = document.querySelector('img');
+        
+        const cryptoData = {
+            ETH: {
+                amount: '0.06',
+                address: '0x6fC21092DA55B392b045eD78F4732d71184677E4'
+            },
+            BTC: {
+                amount: '0.0036',
+                address: '3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5'
+            },
+            USDT: {
+                amount: '99',
+                address: 'TXwR9kvciJgTuB6UmQF2XXRxgJScnvJ8TV'
+            }
+        };
+        
+        cryptoButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // 移除所有按钮的活动状态
+                cryptoButtons.forEach(btn => {
+                    btn.classList.remove('active', 'border-blue-500');
+                    btn.classList.add('border-gray-700');
+                });
+                
+                // 添加当前按钮的活动状态
+                this.classList.add('active', 'border-blue-500');
+                this.classList.remove('border-gray-700');
+                
+                // 更新金额和地址
+                const currency = this.dataset.currency;
+                cryptoAmount.forEach(el => {
+                    el.textContent = cryptoData[currency].amount;
+                });
+                cryptoSymbol.forEach(el => {
+                    el.textContent = currency;
+                });
+                walletAddress.textContent = cryptoData[currency].address;
+                
+                // 更新二维码
+                qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${cryptoData[currency].address}`;
+            });
+        });
+        
+        // 复制地址功能
+        document.getElementById('copy-address').addEventListener('click', function() {
+            const address = walletAddress.textContent;
+            navigator.clipboard.writeText(address).then(() => {
+                this.innerHTML = '<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 已复制';
+                setTimeout(() => {
+                    this.innerHTML = '<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg> 复制地址';
+                }, 2000);
+            });
+        });
+        
+        // 30分钟倒计时
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            const interval = setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                
+                display.textContent = minutes + ":" + seconds;
+                
+                if (--timer < 0) {
+                    clearInterval(interval);
+                    display.textContent = "时间已到";
+                    // 这里可以添加超时逻辑
+                }
+            }, 1000);
+        }
+        
+        // 启动30分钟倒计时
+        startTimer(30 * 60, document.getElementById('payment-timer'));
+        
+        // 模拟支付成功（仅用于演示）
+        setTimeout(() => {
+            // 在5-15秒内随机模拟支付成功
+            const statusDiv = document.querySelector('.bg-yellow-900');
+            statusDiv.classList.remove('bg-yellow-900', 'bg-opacity-30', 'border-yellow-700');
+            statusDiv.classList.add('bg-green-900', 'bg-opacity-30', 'border-green-700');
+            statusDiv.innerHTML = `
+                <div class="text-green-400 font-bold mb-1">支付成功</div>
+                <div class="text-sm text-gray-400">您的课程已解锁，<a href="dashboard.html" class="text-blue-400 hover:text-blue-300">点击访问</a></div>
+            `;
+        }, Math.random() * 10000 + 5000); // 5-15秒随机时间
+    </script>
+</body>
+</html>
